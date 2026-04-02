@@ -9,7 +9,7 @@ export function AboutUs() {
           <img
             src="/aboutimage.png"
             alt="Cleaning supplies"
-            className="w-92 sm:w-90 object-cover"
+            className="w-92 sm:w-90 object-cover" 
           />
         </div>
 
