@@ -18,7 +18,7 @@ export function AboutUs() {
           <h2 className="pl-1 text-2xl sm:text-3xl font-bold text-[#09005D] mb-1">
             About Us
           </h2>
-          <div className="h-[2px]  w-40 mb-2 bg-[#E8C86E]"/>
+          <div className="h-[2px] w-40 mb-2 bg-[#E8C86E]"/>
           <p className="text-sm leading-relaxed mb-6">
             Zaher Contracts is a professional cleaning and facility management
             company specializing in healthcare, corporate and institutional
