@@ -10,9 +10,11 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <AboutUs />
-      <Services />
-      <WhyChooseUs />
+      <div className="bg-[linear-gradient(180deg,_rgba(255,255,255,1)_25%,_rgba(90,95,100,1)_96%)]">
+        <AboutUs />
+        <Services />
+        <WhyChooseUs />  
+      </div>
       <ContactUs />
     </>
   );
