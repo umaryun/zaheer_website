@@ -2,14 +2,14 @@ import { Triangle } from "lucide-react";
 
 export function AboutUs() {
   return (
-    <section id="about" className="border py-16 px-6 sm:px-10 lg:px-16 bg-white">
+    <section id="about" className="py-16 px-6 sm:px-10 lg:px-16">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Image */}
-        <div className="flex justify-center">
+        <div className="h-full flex justify-center">
           <img
             src="/aboutimage.png"
             alt="Cleaning supplies"
-            className="w-92 sm:w-90 object-cover" 
+            className="w-130 sm:w-90 object-cover" 
           />
         </div>
 
