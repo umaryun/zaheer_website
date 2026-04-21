@@ -5,6 +5,7 @@ import {
   Factory,
   Bug,
 } from "lucide-react";
+import { ServiceCarousel } from "./ServiceCarosel";
 
 const services = [
   {
@@ -36,13 +37,14 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-12 px-6 sm:px-10 lg:px-16 bg-navy">
+    <section className="py-12 px-6 sm:px-10 lg:px-16">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-center text-xl font-bold text-white tracking-widest uppercase mb-10">
+        <h2 className="text-center text-2xl font-bold text-[#09005D] tracking-widest uppercase mb-6">
           Services
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
-          {services.map((service) => (
+        <div className="">
+          <ServiceCarousel />
+          {/* {services.map((service) => (
             <div
               key={service.label}
               className="flex flex-col items-center gap-3"
@@ -63,7 +65,7 @@ export function Services() {
                 {service.label}
               </p>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
