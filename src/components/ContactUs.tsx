@@ -1,77 +1,95 @@
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 
 export function ContactUs() {
   return (
-    <section id="contact" className="py-14 px-6 sm:px-10 lg:px-16 bg-gray-50">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-navy text-center mb-10">
-          Contact Us Today!
-        </h2>
+    <section
+      id="contact"
+      className="relative py-14 px-6 sm:px-10 lg:pr-16 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #d8d0f0 0%, #c7cfe8 30%, #dcd4f2 60%, #e0daf4 100%)",
+      }}
+    >
+      <div className="max-w-full mx-auto">
+        
 
-        <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-          {/* Phone & Email */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label className="block text-sm font-semibold text-navy mb-1.5">
-                Phone:
-              </label>
-              <Input
-                type="tel"
-                placeholder=""
-                className="bg-white border-gray-300 focus:border-navy focus:ring-navy rounded-md"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-navy mb-1.5">
-                Email:
-              </label>
-              <Input
-                type="email"
-                placeholder=""
-                className="bg-white border-gray-300 focus:border-navy focus:ring-navy rounded-md"
-              />
-            </div>
-          </div>
-
-          {/* Address */}
-          <div>
-            <label className="block text-sm font-semibold text-navy mb-1.5">
-              Address:
-            </label>
-            <Input
-              type="text"
-              placeholder=""
-              className="bg-white border-gray-300 focus:border-navy focus:ring-navy rounded-md"
+        <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-start">
+          {/* Left: Sponge hand image */}
+          <div className="w-52 lg:w-114 hidden md:flex items-start justify-center bg-transparent">
+            <img
+              src="/sponge-hand1.png"
+              alt="Hand holding cleaning sponge"
+              className="absolute -bottom-25 -left-25 bg-transparent w-52 lg:w-170 object-cover rotate-220"
             />
           </div>
 
-          {/* Message */}
-          <div className="relative">
-            <label className="block text-sm font-semibold text-navy mb-1.5">
-              Send a Message:
-            </label>
-            <div className="relative">
-              <textarea
-                rows={3}
-                className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-navy focus:ring-1 focus:ring-navy focus:outline-none resize-none"
-              />
-              <button
-                type="submit"
-                className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-gold hover:bg-gold/90 flex items-center justify-center text-white shadow-md transition-all hover:scale-105"
-              >
-                <Send className="w-4 h-4" />
+          {/* Right: Form */}
+          <div className="z-50">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-dark text-center mb-10">
+              Contact Us Today!
+            </h2>
+            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              {/* Phone & Email */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-xl font-bold text-[#2C5180] mb-1.5">
+                    Phone:
+                  </label>
+                  <input
+                    type="tel"
+                    className="w-full h-10 rounded-full border-none bg-white px-4 text-sm focus:ring-2 focus:ring-[#09005D] focus:outline-none shadow-sm"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xl font-bold text-[#2C5180] mb-1.5">
+                    Email:
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full h-10 rounded-full border-none bg-white px-4 text-sm focus:ring-2 focus:ring-[#09005D] focus:outline-none shadow-sm"
+                  />
+                </div>
+              </div>
+
+              {/* Address */}
+              <div>
+                <label className="block text-xl font-bold text-[#2C5180] mb-1.5">
+                  Address:
+                </label>
+                <input
+                  type="text"
+                  className="w-full h-10 rounded-full border-none bg-white px-4 text-sm focus:ring-2 focus:ring-[#09005D] focus:outline-none shadow-sm"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-xl font-bold text-[#2C5180] mb-1.5">
+                  Send a Message:
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    className="w-full h-10 rounded-full border-none bg-white px-4 pr-24 text-sm focus:ring-2 focus:ring-[#09005D] focus:outline-none shadow-sm"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 h-8 px-5 rounded-full bg-[#2C5280] hover:bg-[#09005D] text-white text-xs font-bold tracking-wider uppercase transition-all hover:scale-105 flex items-center gap-1.5"
+                  >
+                    SEND
+                    <Send className="w-3 h-3" />
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            {/* Book Appointment CTA */}
+            <div className="mt-8 flex justify-center">
+              <button className="bg-[#2C5280] hover:bg-[#09005D] text-white text-xs px-8 py-3 rounded-md font-bold tracking-wider uppercase transition-all hover:scale-105">
+                Book An Appointment!
               </button>
             </div>
           </div>
-        </form>
-
-        {/* Book Appointment CTA */}
-        <div className="mt-8 flex justify-center">
-          <Button className="bg-navy hover:bg-navy-dark text-white text-xs px-8 py-3 rounded font-semibold tracking-wide uppercase">
-            Book An Appointment
-          </Button>
         </div>
       </div>
     </section>
