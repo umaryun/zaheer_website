@@ -1,60 +1,58 @@
-import * as React from "react"
-
 import { Card, CardContent } from "@/components/ui/card"
+import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Hospital, HospitalIcon } from "lucide-react"
-
-import {
-  ShieldCheck,
-  Trash2,
-  Sparkles,
-  Factory,
-  Bug,
-} from "lucide-react";
-import hospitalIcon from "../../public/Hospitalicon.png";
-import sanitizer from "../../public/sanitizer.png"
-import broom from "../../public/broom.png";
-import recycle from "../../public/recycle.png"
-import tools from "../../public/tools.png"
+import hospitalIcon from "/Hospitalicon.png";
+import sanitizer from "/sanitizer.png"
+import broom from "/broom.png";
+import recycle from "/recycle.png"
+import tools from "/tools.png"
 
 
 const services = [
   {
     icon: hospitalIcon,
     label: "Hospital Cleaning\n& Disinfection",
-    color: "bg-white",
+    color: "bg-[#023265CC]",
+    textColor: "text-white",
   },
   {
     icon: recycle,
     label: "Waste\nManagement",
-    color: "bg-white",
+    color: "bg-[#FFFFFF99]",
+    textColor: "text-[#02326580]",
   },
   {
     icon: broom,
     label: "Janitorial Services",
-    color: "bg-gold",
+    color: "bg-[#023265CC]",
+    textColor: "text-white",
   },
   {
     icon: tools,
     label: "Factory\nMaintenance",
-    color: "bg-white",
+    color: "bg-[#FFFFFF99]",
+    textColor: "text-[#02326580]",
   },
   {
     icon: sanitizer,
     label: "Deep Cleaning &\nFumigation",
-    color: "bg-white",
+    color: "bg-[#023265CC]",
+    textColor: "text-white",
   },
 ];
 
 export function ServiceCarousel() {
   return (
     <Carousel
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
       opts={{
         align: "start",
       }}
@@ -64,18 +62,16 @@ export function ServiceCarousel() {
         {services.map((service, index) => (
           <CarouselItem key={index} className="basis-1/3 lg:basis-1/5">
             <div className="p-1">
-              <Card className={`${index % 2 == 0 ? "bg-[#023265CC] text-white" : "bg-[#FFFFFF99] text-[#02326580]"} rounded-lg p-0 ring-0`}>
-                <CardContent className="flex flex-col aspect-square items-center py-6">
-                  <img src={service.icon} alt="" className="w-16"/>
-                  <span className="mt-5 text-base font-semibold">{service.label}</span>
+              <Card className={`${service.color} ${service.textColor} rounded-xl p-0 ring-0 border-0 shadow-lg`}>
+                <CardContent className="flex flex-col aspect-square items-center justify-center py-5 px-3">
+                  <img src={service.icon} alt="" className="w-14 h-14 object-contain"/>
+                  <span className="mt-4 text-xs sm:text-sm font-bold text-center leading-tight whitespace-pre-line">{service.label}</span>
                 </CardContent>
               </Card>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      {/* <CarouselPrevious />
-      <CarouselNext /> */}
     </Carousel>
   )
 }
