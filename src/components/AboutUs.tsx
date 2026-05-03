@@ -15,7 +15,7 @@ export function AboutUs() {
 
         {/* Right: Content */}
         <div> 
-          <h2 className="pl-1 text-2xl  sm:text-3xl font-bold text-[#09005D] mb-1">
+          <h2 className="pl-1 text-2xl  sm:text-3xl font-bold text-navy-dark mb-1">
             About Us
           </h2>
           <div className="h-0.5 w-40 mb-2 bg-[#E8C86E]"/>
