@@ -25,7 +25,7 @@ export function WhyChooseUs() {
                   key={reason.text}
                   className="flex items-center gap-3 text-white text-sm font-medium"
                 >
-                  <reason.icon className="w-5 h-5 text-white/80 flex-shrink-0" strokeWidth={2.5} />
+                  <reason.icon className="w-5 h-5 text-white/80 shrink-0" strokeWidth={2.5} />
                   <span>{reason.text}</span>
                 </li>
               ))}
