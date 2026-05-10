@@ -27,7 +27,7 @@ export function AboutUs() {
 
           {/* Mission Card */}
           <div className="border border-[#D9D9D9] shadow bg-[#AAAAAA4D] rounded-lg p-4 mb-4">
-            <h3 className="text-md font-bold text-[#09005D] flex items-center gap-1 mb-1">
+            <h3 className="text-md font-bold text-navy-dark flex items-center gap-1 mb-1">
               <span className="text-navy-dark rotate-90"><Triangle size={8} fill="#09005D"/></span> Our Mission
             </h3>
             <p className="text-black text-sm leading-relaxed">
