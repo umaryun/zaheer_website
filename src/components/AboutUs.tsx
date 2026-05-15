@@ -16,7 +16,7 @@ export function AboutUs() {
         {/* Right: Content */}
         <div> 
           <h2 className="pl-1 text-2xl  sm:text-3xl font-bold text-navy-dark mb-1">
-            About Us
+            About Us 
           </h2>
           <div className="h-0.5 w-40 mb-2 bg-gold"/>
           <p className="text-sm leading-relaxed mb-6">
@@ -27,7 +27,7 @@ export function AboutUs() {
 
           {/* Mission Card */}
           <div className="border border-[#D9D9D9] shadow bg-[#AAAAAA4D] rounded-lg p-4 mb-4">
-            <h3 className="text-md font-bold text-navy-dark flex items-center gap-1 mb-1">
+            <h3 className="text-md font-bold text-navy-dark flex items-center gap-1 mb-1 ">
               <span className="text-navy-dark rotate-90"><Triangle size={8} fill="#09005D"/></span> Our Mission
             </h3>
             <p className="text-black text-sm leading-relaxed">
